@@ -30,4 +30,5 @@ Navigate to the project directory and launch the application with:
 Authors
 
 @yonasghiwot
+
 @dagm24

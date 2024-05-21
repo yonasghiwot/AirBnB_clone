@@ -20,7 +20,7 @@ class HBNBCommand(cmd.Cmd):
                   'City', 'Amenity', 'Place', 'Review']
 
     def emptyline(self):
-        """do not execute last 
+        """do not execute last
         command with empty line"""
         pass
 
@@ -78,7 +78,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
 
     def do_destroy(self, line):
-        """delete instance based 
+        """delete instance based
         on class and id"""
         args = line.split(" ")
         if args[0] in self.class_name:
@@ -100,7 +100,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
 
     def do_all(self, line):
-        """print all instances or 
+        """print all instances or
         all class instances"""
         if line in self.class_name:
             all_obj = storage.all()

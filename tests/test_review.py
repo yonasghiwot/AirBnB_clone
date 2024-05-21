@@ -54,7 +54,7 @@ class TestReview(unittest.TestCase):
         del rm2
 
     def test_attribute(self):
-        """asdad"""
+        """test self attributes"""
         rm3 = Review()
 
         self.assertTrue(hasattr(rm3, "place_id"))

@@ -1,4 +1,4 @@
-The AirBnB Clone Project
+                                          The AirBnB Clone Project
 
 ![AirBnB Logo](https://www.pngitem.com/pimgs/m/132-1322125_transparent-background-airbnb-logo-hd-png-download.png)
 
@@ -11,11 +11,17 @@ This console, written in Python 3, facilitates CRUD operations (Create, Read, Up
 Features
 
 User Authentication and Authorization:
-Securely manage user access. 
-CRUD Operations: Create, read, update, and delete Airbnb listings. 
-Advanced Search: Locate listings by location, price, availability, and other criteria. 
-Booking Management: View and manage bookings and reservations. 
-Reporting: Generate comprehensive reports and statistics on listings and bookings. 
+
+Securely manage user access.
+ 
+CRUD Operations: Create, read, update, and delete Airbnb listings.
+ 
+Advanced Search: Locate listings by location, price, availability, and other criteria.
+ 
+Booking Management: View and manage bookings and reservations.
+
+Reporting: Generate comprehensive reports and statistics on listings and bookings.
+ 
 Interactive Interface: Enjoy a user-friendly and interactive command-line experience.
 
 
@@ -50,18 +56,35 @@ Installation
 
 File Structure
 
-console.py	                    The main executable script for the command interpreter.
+console.py ------  The main executable script for the command interpreter.
 
-models/engine/file_storage.py	    Handles the serialization and deserialization of instances to and from a JSON file.
 
-models/__init__.py	            Initializes the `FileStorage` instance.
-models/base_model.py	            Defines common attributes/methods for other classes.
-models/user.py	                    User class inheriting from `BaseModel
-models/state.py	                    State class inheriting from `BaseModel
-models/city.py	                    City class inheriting from `BaseModel
-models/amenity.py	            Amenity class inheriting from `BaseModel
-models/place.py	                    Place class inheriting from `BaseModel
-models/review.py	            Review class inheriting from `BaseModel
+models/engine/file_storage.py ------ Handles the serialization and deserialization of instances to and from a JSON file.
+
+
+models/__init__.py ------ Initializes the `FileStorage` instance.
+
+
+models/base_model.py ------ Defines common attributes/methods for other classes.
+
+
+models/user.py ------ User class inheriting from `BaseModel
+
+
+models/state.py ------ State class inheriting from `BaseModel
+
+
+models/city.py ------ City class inheriting from `BaseModel
+
+
+models/amenity.py ------ Amenity class inheriting from `BaseModel
+
+
+models/place.py ------ Place class inheriting from `BaseModel
+
+
+models/review.py ------ Review class inheriting from `BaseModel
+
 
 usage
 
@@ -72,15 +95,20 @@ Interactive Mode
 In this mode, the console displays a prompt (`hbnb`) for user input.
 
 Example:
+
 $ ./console.py
+
 (hbnb) help
 
 Documented commands (type help <topic>):
-========================================
+----------------------------------------
+
 EOF  help  quit
 
-(hbnb) 
-(hbnb) 
+(hbnb)
+ 
+(hbnb)
+ 
 (hbnb) quit
 $
 
@@ -90,13 +118,17 @@ Non-interactive Mode
 Commands are piped into the console's execution.
 
 Example:
+
 sh
+
 $ echo "help" | ./console.py
+
 (hbnb)
 
 Documented commands (type help <topic>):
-========================================
+----------------------------------------
 EOF  help  quit
+
 (hbnb) 
 
 Authors

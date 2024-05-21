@@ -24,11 +24,9 @@ class TestAmenity(unittest.TestCase):
         self.assertIsInstance(amenity1.created_at, datetime)
         self.assertLess(amenity1.created_at, snapshot2)
         self.assertGreater(amenity1.created_at, snapshot)
-        
         self.assertIsInstance(amenity1.updated_at, datetime)
         self.assertLess(amenity1.updated_at, snapshot2)
         self.assertGreater(amenity1.updated_at, snapshot)
-        
         amenity1.save()
         self.assertIsInstance(amenity1.updated_at, datetime)
         self.assertGreater(amenity1.updated_at, snapshot)
@@ -44,7 +42,7 @@ class TestAmenity(unittest.TestCase):
         self.assertIsInstance(amenity2.id, str)
         self.assertTrue(len(amenity2.id) > 0)
         self.assertTrue(amenity2.id == test_dict['id'])
-        
+
         self.assertIsInstance(amenity2.created_at, datetime)
         self.assertTrue(amenity2.created_at.isoformat('T') == test_dict['created_at'])
         self.assertIsInstance(amenity2.updated_at, datetime)

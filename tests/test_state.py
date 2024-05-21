@@ -24,17 +24,17 @@ class TestState(unittest.TestCase):
         self.assertIsInstance(sm1.created_at, datetime)
         self.assertLess(sm1.created_at, snapshot2)
         self.assertGreater(sm1.created_at, snapshot)
-        
+
         self.assertIsInstance(sm1.updated_at, datetime)
         self.assertLess(sm1.updated_at, snapshot2)
         self.assertGreater(sm1.updated_at, snapshot)
-        
+
         sm1.save()
         self.assertIsInstance(sm1.updated_at, datetime)
         self.assertGreater(sm1.updated_at, snapshot)
         self.assertGreater(sm1.updated_at, snapshot2)
         del sm1
-        
+
     def test_init_dict(self):
         """test dict basemodel init"""
         test_dict = {'updated_at': datetime(1963, 11, 22, 12, 30, 00, 716921).isoformat('T')
@@ -44,7 +44,7 @@ class TestState(unittest.TestCase):
         self.assertIsInstance(sm2.id, str)
         self.assertTrue(len(sm2.id) > 0)
         self.assertTrue(sm2.id == test_dict['id'])
-        
+
         self.assertIsInstance(sm2.created_at, datetime)
         self.assertTrue(sm2.created_at.isoformat('T') == test_dict['created_at'])
         self.assertIsInstance(sm2.updated_at, datetime)

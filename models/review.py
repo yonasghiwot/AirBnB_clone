@@ -5,6 +5,6 @@ from models.base_model import BaseModel
 
 
 class Review(BaseModel):
-        """Represents a review that inherits from BaseModel."""
-        place_id = ""
+    """Represents a review that inherits from BaseModel."""
+    place_id = ""
 

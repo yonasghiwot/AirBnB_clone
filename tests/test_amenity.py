@@ -9,10 +9,10 @@ from models.amenity import Amenity
 
 
 class TestAmenity(unittest.TestCase):
-    """[test Amenity]"""
+    """Tests for the Amenity class"""
 
     def test_init(self):
-        """[test amenity init blank test]"""
+         """Test default initialization of Amenity"""
         snapshot = datetime.now()
         amenity1 = Amenity()
         snapshot2 = datetime.now()
@@ -34,7 +34,7 @@ class TestAmenity(unittest.TestCase):
         del amenity1
 
     def test_init_dict(self):
-        """[test dict basemodel init]"""
+        """Test initialization of Amenity with a dictionary"""
         test_dict = {'updated_at': datetime(1973, 11, 22, 12, 30, 00, 716921).isoformat('T')
                      , 'id': 'z3854b62-93fa-fbbg-27de-630706f8313c', 'created_at': datetime(1973, 11, 22, 12, 30, 00, 716921).isoformat('T')}
         amenity2 = Amenity(**test_dict)
@@ -52,7 +52,7 @@ class TestAmenity(unittest.TestCase):
         del amenity2
 
     def test_attribute(self):
-        """tets self atributes"""
+        """Test attributes of Amenity"""
         amenity3 = Amenity()
 
         self.assertTrue(hasattr(amenity3, "name"))

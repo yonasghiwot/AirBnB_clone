@@ -9,10 +9,10 @@ from models.review import Review
 
 
 class TestReview(unittest.TestCase):
-    """test BaseModel"""
+    """tests for review for class"""
 
     def test_init(self):
-        """test blank basemodel init"""
+        """Test blank Review initialization"""
         snapshot = datetime.now()
         rm1 = Review()
         snapshot2 = datetime.now()
@@ -36,7 +36,7 @@ class TestReview(unittest.TestCase):
         del rm1
 
     def test_init_dict(self):
-        """test dict basemodel init"""
+        """Test dictionary initialization"""
         test_dict = {'updated_at': datetime(1963, 11, 22, 12, 30, 00, 716921).isoformat('T')
                      , 'id': 'z3854b62-93fa-fbbe-27de-630706f8313c', 'created_at': datetime(1963, 11, 22, 12, 30, 00, 716921).isoformat('T')}
         rm2 = Review(**test_dict)
@@ -54,7 +54,7 @@ class TestReview(unittest.TestCase):
         del rm2
 
     def test_attribute(self):
-        """test self attributes"""
+        """Test Review attributes"""
         rm3 = Review()
 
         self.assertTrue(hasattr(rm3, "place_id"))

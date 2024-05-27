@@ -9,10 +9,10 @@ from models.city import City
 
 
 class TestCity(unittest.TestCase):
-    """test BaseModel"""
+    """test for the city class"""
 
     def test_init(self):
-        """test blank basemodel init"""
+        """Test default initialization of City"""
         snapshot = datetime.now()
         cm1 = City()
         snapshot2 = datetime.now()
@@ -36,7 +36,7 @@ class TestCity(unittest.TestCase):
         del cm1
 
     def test_init_dict(self):
-        """test dict basemodel init"""
+        """Test initialization of City with a dictionary"""
         test_dict = {'updated_at': datetime(1963, 11, 22, 12, 30, 00, 716921).isoformat('T')
                      , 'id': 'z3854b62-93fa-fbbe-27de-630706f8313c', 'created_at': datetime(1963, 11, 22, 12, 30, 00, 716921).isoformat('T')}
         cm2 = City(**test_dict)
@@ -54,7 +54,7 @@ class TestCity(unittest.TestCase):
         del cm2
 
     def test_attribute(self):
-        """asdad"""
+         """Test attributes of City"""
         cm3 = City()
 
         self.assertTrue(hasattr(cm3, "state_id"))

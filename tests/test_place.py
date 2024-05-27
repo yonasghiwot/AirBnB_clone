@@ -8,7 +8,7 @@ from models.base_model import BaseModel
 class TestPlace(unittest.TestCase):
     """ Test cases for Place class """
     def testing_attrs(self):
-        """ Testing if Place class its attrs """
+        """ Testing if Place class has the correct attributes"""
         plc = Place()
         self.assertTrue(hasattr(plc, "city_id"))
         self.assertTrue(hasattr(plc, "user_id"))
@@ -23,7 +23,7 @@ class TestPlace(unittest.TestCase):
         self.assertTrue(hasattr(plc, "amenity_ids"))
 
     def testing_attr_vals(self):
-        """ Testing inits attr values"""
+        """ Testing initial attribute values"""
         plc = Place()
         self.assertEqual(plc.city_id, "")
         self.assertEqual(plc.user_id, "")

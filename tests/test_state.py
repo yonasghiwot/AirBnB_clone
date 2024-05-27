@@ -9,10 +9,10 @@ from models.state import State
 
 
 class TestState(unittest.TestCase):
-    """test BaseModel"""
+    """Test cases for State class"""
 
     def test_init(self):
-        """test blank basemodel init"""
+        """Test blank State initialization"""
         snapshot = datetime.now()
         sm1 = State()
         snapshot2 = datetime.now()
@@ -36,7 +36,7 @@ class TestState(unittest.TestCase):
         del sm1
 
     def test_init_dict(self):
-        """test dict basemodel init"""
+        """Test dictionary initialization"""
         test_dict = {'updated_at': datetime(1963, 11, 22, 12, 30, 00, 716921).isoformat('T')
                      , 'id': 'z3854b62-93fa-fbbe-27de-630706f8313c', 'created_at': datetime(1963, 11, 22, 12, 30, 00, 716921).isoformat('T')}
         sm2 = State(**test_dict)
@@ -54,7 +54,7 @@ class TestState(unittest.TestCase):
         del sm2
 
     def test_attribute(self):
-        """asdad"""
+        """Test State attributes"""
         sm3 = State()
 
         self.assertTrue(hasattr(sm3, "name"))

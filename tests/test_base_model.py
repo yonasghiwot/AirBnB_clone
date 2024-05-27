@@ -9,10 +9,10 @@ from models.base_model import BaseModel
 
 
 class TestBaseModel(unittest.TestCase):
-    """test BaseModel"""
+    """Tests for the BaseModel class"""
 
     def test_init(self):
-        """test blank basemodel init"""
+        """Test default initialization of BaseModel"""
         snapshot = datetime.now()
         bm1 = BaseModel()
         snapshot2 = datetime.now()
@@ -36,7 +36,7 @@ class TestBaseModel(unittest.TestCase):
         del bm1
 
     def test_init_dict(self):
-        """test dict basemodel init"""
+        """Test initialization of BaseModel with a dictionary"""
         test_dict = {'updated_at': datetime(1963, 11, 22, 12, 30, 00, 716921).isoformat('T')
                      , 'id': 'z3854b62-93fa-fbbe-27de-630706f8313c', 'created_at': datetime(1963, 11, 22, 12, 30, 00, 716921).isoformat('T')}
         bm2 = BaseModel(**test_dict)

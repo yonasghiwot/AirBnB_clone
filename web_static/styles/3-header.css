@@ -6,8 +6,8 @@ header {
 }
 
 .logo {
-    width       : 140px;
-    height      : 70px;
-    background  : url("../images/icon_header.png") no-repeat center;
+    width       : 150px;
+    height      : 80px;
+    background  : url("../images/icon_header.png") no-repeat;
     padding-left: 20px;
 }

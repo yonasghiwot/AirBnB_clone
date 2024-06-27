@@ -17,7 +17,6 @@ What you should learn from this project:
 * How to compute CSS Specificity Value
 * What are Box properties in CSS
 
-
-Authors 
+Authors
 yonas g/hiwot <yonihabeshaw@gmail.com>
 dagmawit terefe <>

@@ -15,7 +15,7 @@ from models import storage
 
 class HBNBCommand(cmd.Cmd):
     """Command line interpreter class"""
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
     class_name = ['BaseModel', 'User', 'State',
                   'City', 'Amenity', 'Place', 'Review']
 
@@ -117,6 +117,21 @@ class HBNBCommand(cmd.Cmd):
             for keys in all_obj.keys():
                 all_int.append(str(all_obj[keys]))
             print(all_int)
+
+    def do_count(self, line):
+        """Count current number of class instances"""
+        if line in self.class_name:
+            all_obj = storage.all()
+            all_init = []
+            count = 0
+            for keys in all_obj.keys():
+                if line == all_obj[keys].__class__.__name__:
+                    count += 1
+            print(count)
+
+    def help_count(self):
+        """help usage"""
+        print("Usage: count <class_name>")
 
     def do_update(self, line):
         """add or update attribute"""
